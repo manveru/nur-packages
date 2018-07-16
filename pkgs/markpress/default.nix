@@ -1,10 +1,11 @@
-{ yarn2nix, oniguruma }:
+{ yarn2nix, oniguruma, fetchFromGitHub }:
 yarn2nix.mkYarnPackage {
   name = "markpress";
-  src = fetchGit {
-    url = "https://github.com/gamell/markpress";
-    rev = "33ac784c191f9b86b1cf65b94ccc9c01f75e7a7b";
-    ref = "v4.0.0";
+  src = fetchFromGitHub {
+    owner = "gamell";
+    repo = "markpress";
+    rev = "v4.0.0";
+    sha256 = "1xhdmdmw5addp8q0w397jyvd2zpmr8g0fpvh83rlia4212nsiqa8";
   };
   extraBuildInputs = [ oniguruma ];
   packageJson = ./package.json;
