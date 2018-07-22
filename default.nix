@@ -4,6 +4,7 @@
   cht-sh = callPackage ./pkgs/cht-sh {};
   markpress = callPackage ./pkgs/markpress {};
   nodeppt = callPackage ./pkgs/nodeppt {};
+  diakonos = callPackage ./pkgs/diakonos {};
   lib = {
     git-info = callPackage ./lib/git-info {};
   };
