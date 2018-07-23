@@ -7,4 +7,7 @@
   lib = {
     git-info = callPackage ./lib/git-info {};
   };
+  modules = {
+    scylla = callPackage ./modules/scylla.nix {};
+  };
 }
