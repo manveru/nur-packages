@@ -4,6 +4,7 @@
   cht-sh = callPackage ./pkgs/cht-sh {};
   markpress = callPackage ./pkgs/markpress {};
   diakonos = callPackage ./pkgs/diakonos {};
+  pgmodeler = pkgs.libsForQt5.callPackage ./pkgs/pgmodeler {};
   lib = {
     git-info = callPackage ./lib/git-info {};
   };
