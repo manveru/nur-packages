@@ -5,6 +5,7 @@
   markpress = callPackage ./pkgs/markpress {};
   diakonos = callPackage ./pkgs/diakonos {};
   pgmodeler = pkgs.libsForQt5.callPackage ./pkgs/pgmodeler {};
+  redzone = callPackage ./pkgs/redzone {};
   lib = {
     git-info = callPackage ./lib/git-info {};
   };
