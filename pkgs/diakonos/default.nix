@@ -1,4 +1,5 @@
-{ stdenv, ruby, makeWrapper, buildRubyGem, ncurses }:
+{ stdenv, fetchFromGitHub
+, ruby, makeWrapper, buildRubyGem, ncurses }:
 let
   curses = buildRubyGem {
     name = "curses";
@@ -12,9 +13,11 @@ let
 in
 stdenv.mkDerivation {
   name = "diakonos";
-  src = fetchGit {
-    url = https://github.com/Pistos/diakonos;
+  src = fetchFromGitHub {
+    owner = "Pistos";
+    repo = "diakonos";
     rev = "caf9b48bc0f7c6d270dcfbc1be864678390bd021";
+    sha256 = "0qkd86222rxqgjx75h8bqs9wfigsc9fy8g4690ypqcsd4mnf6nic";
   };
 
   buildInputs = [ ruby makeWrapper ];
